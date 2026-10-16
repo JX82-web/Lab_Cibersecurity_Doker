@@ -1,0 +1,30 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: lab_mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: cybersecurity_pass_2026
+      MYSQL_DATABASE: lab_db
+    volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - lab_network
+
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    container_name: lab_web_app
+    restart: always
+    ports:
+      - "8080:80"
+      - "2222:22"
+    depends_on:
+      - db
+    networks:
+      - lab_network
+
+networks:
+  lab_network:
+    driver: bridge
