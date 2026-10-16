@@ -1,0 +1,32 @@
+services:
+  sqli_db:
+    image: mysql:8.0
+    container_name: ctf_sql_auth_db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: RootDB_AuthLab_2026!
+      MYSQL_DATABASE: authlab
+      MYSQL_USER: web_user
+      MYSQL_PASSWORD: WebDB_AuthLab_2026!
+    volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    networks:
+      - authlab_net
+
+  auth_web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    container_name: ctf_sql_auth_web
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "2222:22"
+    depends_on:
+      - sqli_db
+    networks:
+      - authlab_net
+
+networks:
+  authlab_net:
+    driver: bridge
