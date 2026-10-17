@@ -1,0 +1,20 @@
+services:
+  sqli_db:
+    image: mysql:8.0
+    container_name: ctf_sql_error_db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: RootDB_Error_2026!
+      MYSQL_DATABASE: errorlab
+      MYSQL_USER: web_user
+      MYSQL_PASSWORD: WebDB_Error_2026!
+    volumes: ["./database/init.sql:/docker-entrypoint-initdb.d/init.sql:ro"]
+    networks: [error_net]
+  error_web:
+    build: {context: ./web, dockerfile: Dockerfile}
+    container_name: ctf_sql_error_web
+    restart: unless-stopped
+    ports: ["80:80", "22:22"]
+    depends_on: [sqli_db]
+    networks: [error_net]
+networks: {error_net: {driver: bridge}}
