@@ -6,7 +6,7 @@
 ```
 # Nmap 7.991 scan initiated Mon Oct 19 20:51:44 2026 as: /usr/lib/nmap/nmap -sCV -p22,80 -oN target 172.X.X.X
 
-<details open>
+<details close>
 <summary> ✴️ HINT  Guarde risultati nmap </summary>
 	<p>
 		Nmap scan report for 172.18.0.3
@@ -30,7 +30,7 @@
 ```bash
 	gobuster dir -u http://172.X.X.X/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 100 -x php,html,js,txt -o webscan
 ```
-<details open>
+<details close>
 	<summary>💯  HINT Guarda result gobuster </summary>
 	<p>
 		===============================================================
@@ -71,7 +71,7 @@
         -m POST -c 'PHPSESSID=0937127046f6bf3281cffc514e19aa13' \
         --exclude-length 319 -t 100 -x php,html,js,txt,json
 ```
-<details open>
+<details close>
 	<summary>✴️ HINT guarda risultato gobuster su altro endpoint. </summary>
 	<p>
 		>===============================================================
@@ -155,7 +155,7 @@
 ```bash
 python3 -m http.server 8000
 ```
-<details dir="open">
+<details dir="close">
 	<summary> 🧨 Spiegazione della fase finale clicca  per espandere.</summary>summary
 	<p>
 		+ inviamo la richiesta dal pannello con la nostra direzione url puntando a malicius.html
@@ -174,7 +174,7 @@ chmod +x shell.php
 # Privilege Escalation
 * dopo una lunga ricerca ed enumerazione del sistema, troviamo le credenziali per elevare i nostri privilegi.
 
-<details open>
+<details close>
 	<summary> ✴️ HINT Guarda risultato privilege escalation </summary>
 		<p dir="auto">
 		```bash
