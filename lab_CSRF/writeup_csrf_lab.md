@@ -190,9 +190,7 @@ chmod +x shell.php
 <summary> ✴️ HINT Guarda risultato privilege escalation </summary>
 	<p>
 ```bash
-su root
-whoami
-root
+		su root
 ```
 </p>	
 </details>
