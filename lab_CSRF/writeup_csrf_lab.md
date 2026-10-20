@@ -168,10 +168,12 @@ python3 -m http.server 8000
 <details dir="close">
 <summary> 🧨 Spiegazione della fase finale clicca  per espandere.</summary>
 <p>
-+ inviamo la richiesta dal pannello con la nostra direzione url puntando a malicius.html
-+ subito dopo notiamo che riceviamo la richiesta dall wev server . apro altra pagina rieseguo il login con le credenziali create per accedere al sito e...
-+ l'exploit a funzionato siamo loggati come utenti admin tramite attacco CSRF, subito dopo notiamo un pannello di amministrazione dove si puo caricare un immagine profilo
-+ l'unico problema resta che accetta solo file .zip.
+ inviamo la richiesta dal pannello con la nostra direzione url puntando a malicius.html
+ subito dopo notiamo che riceviamo la richiesta dall web server. 
+ apro altra pagina rieseguo il login con le credenziali create per accedere al sito e...
+ l'exploit a funzionato siamo loggati come utenti admin tramite attacco CSRF,
+ subito dopo notiamo un pannello di amministrazione dove si puo caricare un immagine profilo
+ l'unico problema resta che accetta solo file .zip.
 </p>
 
 #  Reverseshell con `msfvenom`
