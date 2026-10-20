@@ -176,10 +176,10 @@ chmod +x shell.php
 
 <details close>
 	<summary> ✴️ HINT Guarda risultato privilege escalation </summary>
-		<p dir="auto">
+	<p>
 		```bash
-		su root
+				su root
 		```
-		</p>
+	</p>
 	
 </details>
