@@ -6,7 +6,7 @@
 	nmap -sCV -p22,80 172.X.X.X
 ```
 <details close>
-<summary> ✴️ HINT  Guarde risultati nmap </summary>
+<summary> ✴️ HINT  nmap </summary>
 <p>
 ```bash
 	# Nmap 7.991 scan initiated Mon Oct 19 20:51:44 2026 as: /usr/lib/nmap/nmap -sCV -p22,80 -oN target 172.X.X.X
@@ -33,7 +33,7 @@
 	gobuster dir -u http://172.X.X.X/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 100 -x php,html,js,txt -o webscan
 ```
 <details close>
-	<summary>💯  HINT Guarda result gobuster </summary>
+	<summary>💯  HINT gobuster </summary>
 <p>
 ```bash
 	===============================================================
@@ -76,7 +76,7 @@ gobuster dir -u http://172.X.X.X/app_internal/ -w /usr/share/wordlists/dirb/comm
 	 --exclude-length 319 -t 100 -x php,html,js,txt,json
 ```
 <details close>
-	<summary>✴️ HINT guarda risultato gobuster su altro endpoint. </summary>
+	<summary>✴️ HINT gobuster su altro endpoint. </summary>
 <p>
 ```bash
 ===============================================================
@@ -187,10 +187,10 @@ chmod +x shell.php
 <details close>
 <summary> ✴️ HINT Guarda risultato privilege escalation </summary>
 	<p>
-```
-		su root
-		whoami
-			root
+```bash
+su root
+whoami
+root
 ```
 </p>	
 </details>
