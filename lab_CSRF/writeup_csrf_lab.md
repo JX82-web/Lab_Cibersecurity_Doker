@@ -5,12 +5,11 @@
 ```bash
 	nmap -sCV -p22,80 172.X.X.X
 ```
-# Nmap 7.991 scan initiated Mon Oct 19 20:51:44 2026 as: /usr/lib/nmap/nmap -sCV -p22,80 -oN target 172.X.X.X
-
 <details close>
 <summary> ✴️ HINT  Guarde risultati nmap </summary>
 	<p>
-	 ```Nmap scan report for 172.18.0.3
+	 ```# Nmap 7.991 scan initiated Mon Oct 19 20:51:44 2026 as: /usr/lib/nmap/nmap -sCV -p22,80 -oN target 172.X.X.X
+		Nmap scan report for 172.18.0.3
 		Host is up (0.000031s latency)
 		PORT   STATE SERVICE VERSION
 		2/tcp open  ssh     OpenSSH 10.0p2 Debian 7+deb13u4 (protocol 2.0)
