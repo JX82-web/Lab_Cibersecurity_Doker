@@ -132,7 +132,7 @@ Finished
 
 
 <details close>
-	<summary># ✴️ HINT guarda rilultati foothold.</summary>
+	<summary># ✴️ HINT exploit malicius.html.</summary>
 <p>
 * NOTE: o rimosso tutti i tag <> per far si che il code sia leggibile dalla home.
 
