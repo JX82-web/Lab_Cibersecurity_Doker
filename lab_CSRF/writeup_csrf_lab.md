@@ -8,19 +8,19 @@
 <details close>
 <summary> ✴️ HINT  Guarde risultati nmap </summary>
 <p>
-```
-# Nmap 7.991 scan initiated Mon Oct 19 20:51:44 2026 as: /usr/lib/nmap/nmap -sCV -p22,80 -oN target 172.X.X.X
-Nmap scan report for 172.18.0.3
-Host is up (0.000031s latency)
-PORT   STATE SERVICE VERSION
-2/tcp open  ssh     OpenSSH 10.0p2 Debian 7+deb13u4 (protocol 2.0)
-80/tcp open  http    Apache httpd 2.4.68 ((Debian))
-|_http-server-header: Apache/2.4.68 (Debian)
-|_http-title: Did not follow redirect to login.php
-MAC Address: E6:10:56:C5:0F:5D (Unknown)
-Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/
-# Nmap done at Mon Oct 19 20:51:51 2026 -- 1 IP address (1 host up) scanned in 7.20 seconds
+```bash
+	# Nmap 7.991 scan initiated Mon Oct 19 20:51:44 2026 as: /usr/lib/nmap/nmap -sCV -p22,80 -oN target 172.X.X.X
+	Nmap scan report for 172.18.0.3
+	Host is up (0.000031s latency)
+	PORT   STATE SERVICE VERSION
+	2/tcp open  ssh     OpenSSH 10.0p2 Debian 7+deb13u4 (protocol 2.0)
+	80/tcp open  http    Apache httpd 2.4.68 ((Debian))
+	|_http-server-header: Apache/2.4.68 (Debian)
+	|_http-title: Did not follow redirect to login.php
+	MAC Address: E6:10:56:C5:0F:5D (Unknown)
+	Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+	Service detection performed. Please report any incorrect results at https://nmap.org/submit/
+	# Nmap done at Mon Oct 19 20:51:51 2026 -- 1 IP address (1 host up) scanned in 7.20 seconds
 ```
 </p>
 </details>
@@ -35,35 +35,35 @@ Service detection performed. Please report any incorrect results at https://nmap
 <details close>
 	<summary>💯  HINT Guarda result gobuster </summary>
 <p>
-```
-===============================================================
-Gobuster v3.8.2
-by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)	
-===============================================================
-[+] Url:                     http://172.18.0.3/
-[+] Method:                  GET
-[+] Threads:                 100
-[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
-[+] Negative Status codes:   404
-[+] User Agent:              gobuster/3.8.2	
-[+] Extensions:              php,html,js,txt
-[+] Timeout:                 10s
-===============================================================
-Starting gobuster in directory enumeration mode
-===============================================================
-login.php            (Status: 200) [Size: 1357]
-register.php         (Status: 200) [Size: 1393]
-uploads              (Status: 301) [Size: 350] [--> http://172.18.0.3/uploads/]
-index.php            (Status: 302) [Size: 0] [--> login.php]
-javascript           (Status: 301) [Size: 353] [--> http://172.18.0.3/javascript/]
-logout.php           (Status: 302) [Size: 0] [--> login.php]
-dashboard.php        (Status: 302) [Size: 0] [--> login.php]
-plugin               (Status: 301) [Size: 349] [--> http://172.18.0.3/plugin/]
-server-status        (Status: 403) [Size: 315]
-Progress: 1102790 / 1102790 (100.00%)
-===============================================================
-Finished
-===============================================================
+```bash
+	===============================================================
+	Gobuster v3.8.2
+	by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)	
+	===============================================================
+	[+] Url:                     http://172.18.0.3/	
+	[+] Method:                  GET
+	[+] Threads:                 100
+	[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+	[+] Negative Status codes:   404
+	[+] User Agent:              gobuster/3.8.2	
+	[+] Extensions:              php,html,js,txt
+	[+] Timeout:                 10s
+	===============================================================
+	Starting gobuster in directory enumeration mode
+	===============================================================
+	login.php            (Status: 200) [Size: 1357]
+	register.php         (Status: 200) [Size: 1393]
+	uploads              (Status: 301) [Size: 350] [--> http://172.18.0.3/uploads/]
+	index.php            (Status: 302) [Size: 0] [--> login.php]
+	javascript           (Status: 301) [Size: 353] [--> http://172.18.0.3/javascript/]
+	logout.php           (Status: 302) [Size: 0] [--> login.php]
+	dashboard.php        (Status: 302) [Size: 0] [--> login.php]
+	plugin               (Status: 301) [Size: 349] [--> http://172.18.0.3/plugin/]
+	server-status        (Status: 403) [Size: 315]
+	Progress: 1102790 / 1102790 (100.00%)
+	===============================================================
+	Finished
+	===============================================================
 ```
 </p>
 </details>
