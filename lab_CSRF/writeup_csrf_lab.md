@@ -158,11 +158,11 @@
 # Privilege Escalation
 >** dopo una lunga ricerca ed enumerazione di systema troviamo le credenziali per elevare i nostri privilegi.
 <details open>
-<summary> ✴️ HINT Guarda risultato privilege escalation
+	<summary> ✴️ HINT Guarda risultato privilege escalation
 	```bash
-		su root
+			su root
 	```
-</summary>
+	</summary>
 </details>
 ```
 </summary>
