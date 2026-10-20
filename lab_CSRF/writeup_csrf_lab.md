@@ -4,9 +4,11 @@
 	nmap -sCV -p22,80 172.X.X.X
 ```
 # Nmap 7.991 scan initiated Mon Oct 19 20:51:44 2026 as: /usr/lib/nmap/nmap -sCV -p22,80 -oN target 172.X.X.X
-<summary>  ✴️ HINT  Guarde risultati nmap.
-+ Nmap scan report for 172.18.0.3
-+ Host is up (0.000031s latency).
+<details open>
+<summary>
+	::mark ✴️ HINT  Guarde risultati nmap.
+Nmap scan report for 172.18.0.3
+Host is up (0.000031s latency).
 
 PORT   STATE SERVICE VERSION
 22/tcp open  ssh     OpenSSH 10.0p2 Debian 7+deb13u4 (protocol 2.0)
@@ -18,12 +20,16 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Mon Oct 19 20:51:51 2026 -- 1 IP address (1 host up) scanned in 7.20 seconds
 </summary>
+</details>
+
 # Scanzione web app enumerazione
 >** Enumerazione del''applicazione  web con `gobuster`
 ```bash
 	gobuster dir -u http://172.X.X.X/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 100 -x php,html,js,txt -o webscan
 ```
-<summary>  💯 HINT Guarda result gobuster.
+<details open>
+<summary>
+	::mark  💯 HINT Guarda result gobuster.
 ===============================================================
 Gobuster v3.8.2
 by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
@@ -52,20 +58,20 @@ Progress: 1102790 / 1102790 (100.00%)
 ===============================================================
 Finished
 ===============================================================
+
 </summary>
->** Proviamo una semplice query per cercaredi bypassare il pannello di autenticazione
-```bash
-	admin' -- -
-```
->** E siamo dentro
+</details>
 
 # Enumerazione gobuster post con account creato , enumeriamo dall'interno.
+
 ```bash
 	gobuster dir -u http://172.X.X.X/app_internal/ -w /usr/share/wordlists/dirb/common.txt \
         -m POST -c 'PHPSESSID=0937127046f6bf3281cffc514e19aa13' \
         --exclude-length 319 -t 100 -x php,html,js,txt,json
 ```
-<summary> ✴️ HINT guarda risultato gobuster su altro endpoint.
+<details open>
+<summary> 
+	::mark ✴️ HINT guarda risultato gobuster su altro endpoint.
 ===============================================================
 Gobuster v3.8.2
 by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
@@ -111,9 +117,11 @@ Progress: 27678 / 27678 (100.00%)
 Finished
 ===============================================================
 </summary>
+</details>
 
 # foothold (Intrusione).
 >** Dopo vari test e tentativi ripetuti notiamo che l'app e vulnerabile a CSRF, bene creamo un exploit su misura..
+<details open>
 <summary> ✴️ HINT guarda rilultati foothold.
 ```bash
 <!DOCTYPE html>
@@ -150,10 +158,17 @@ Finished
 ```
 >** Siamo dentro come utente www-data,
 </summary>
+</details>
+
 # Privilege Escalation
 >** dopo una lunga ricerca ed enumerazione di systema troviamo le credenziali per elevare i nostri privilegi.
-<summary> ✴️ HINT Guarda risultato privilege escalation
+<details open>
+<summary> 
+	::mark ✴️ HINT Guarda risultato privilege escalation
 ```bash
 	su root
+```
+</summary>
+</details>
 ```
 </summary>
