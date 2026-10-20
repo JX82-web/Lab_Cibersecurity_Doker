@@ -1,4 +1,5 @@
-<h1><marquee> Write up csrf_lab</marquee></h1>
+<img src="https://demolab.com" alt="csrf_lab" />
+
 * Scanzione delle porte con `nmap`
 
 ```bash
