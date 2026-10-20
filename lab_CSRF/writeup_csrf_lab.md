@@ -78,7 +78,7 @@ gobuster dir -u http://172.X.X.X/app_internal/ -w /usr/share/wordlists/dirb/comm
 <details close>
 	<summary>✴️ HINT guarda risultato gobuster su altro endpoint. </summary>
 <p>
-```
+```bash
 ===============================================================
 Gobuster v3.8.2
 by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
@@ -166,7 +166,7 @@ DOCTYPE html
 python3 -m http.server 8000
 ```
 <details dir="close">
-<summary> 🧨 Spiegazione della fase finale clicca  per espandere.</summary>summary
+<summary> 🧨 Spiegazione della fase finale clicca  per espandere.</summary>
 <p>
 + inviamo la richiesta dal pannello con la nostra direzione url puntando a malicius.html
 + subito dopo notiamo che riceviamo la richiesta dall wev server . apro altra pagina rieseguo il login con le credenziali create per accedere al sito e...
