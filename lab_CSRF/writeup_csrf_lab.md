@@ -4,7 +4,7 @@
 	nmap -sCV -p22,80 172.X.X.X
 ```
 # Nmap 7.991 scan initiated Mon Oct 19 20:51:44 2026 as: /usr/lib/nmap/nmap -sCV -p22,80 -oN target 172.X.X.X
-<summary>::mark ✴️ HINT  Guarde risultati nmap.
+<summary>  ✴️ HINT  Guarde risultati nmap.
 + Nmap scan report for 172.18.0.3
 + Host is up (0.000031s latency).
 
@@ -23,7 +23,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 ```bash
 	gobuster dir -u http://172.X.X.X/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 100 -x php,html,js,txt -o webscan
 ```
-<summary>::mark 💯 HINT Guarda result gobuster.
+<summary>  💯 HINT Guarda result gobuster.
 ===============================================================
 Gobuster v3.8.2
 by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
@@ -65,7 +65,7 @@ Finished
         -m POST -c 'PHPSESSID=0937127046f6bf3281cffc514e19aa13' \
         --exclude-length 319 -t 100 -x php,html,js,txt,json
 ```
-<summary>::mark ✴️ HINT guarda risultato gobuster su altro endpoint.
+<summary> ✴️ HINT guarda risultato gobuster su altro endpoint.
 ===============================================================
 Gobuster v3.8.2
 by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
@@ -114,7 +114,7 @@ Finished
 
 # foothold (Intrusione).
 >** Dopo vari test e tentativi ripetuti notiamo che l'app e vulnerabile a CSRF, bene creamo un exploit su misura..
-<summary>::mark ✴️ HINT guarda rilultati foothold.
+<summary> ✴️ HINT guarda rilultati foothold.
 ```bash
 <!DOCTYPE html>
 <html lang="it">
@@ -152,7 +152,7 @@ Finished
 </summary>
 # Privilege Escalation
 >** dopo una lunga ricerca ed enumerazione di systema troviamo le credenziali per elevare i nostri privilegi.
-<summary>::mark ✴️ HINT Guarda risultato privilege escalation
+<summary> ✴️ HINT Guarda risultato privilege escalation
 ```bash
 	su root
 ```
