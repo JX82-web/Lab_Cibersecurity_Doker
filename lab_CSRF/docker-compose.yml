@@ -1,0 +1,38 @@
+services:
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    container_name: web_chall
+    ports:
+      - "8080:80"
+      - "2222:22"
+    depends_on:
+      database:
+        condition: service_healthy # Attende che MySQL sia TOTALMENTE pronto prima di avviare il web
+    networks:
+      - lab_network
+
+  database:
+    image: mysql:8.0
+    container_name: db_chall
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      # Consente a root di connettersi da qualsiasi host (fondamentale per il container web e il pivoting)
+      MYSQL_ROOT_PASSWORD: lovesucks1
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    # Healthcheck per monitorare quando la porta 3306 è effettivamente pronta a ricevere query
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-plovesucks1"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - lab_network
+
+networks:
+  lab_network:
+    driver: bridge
