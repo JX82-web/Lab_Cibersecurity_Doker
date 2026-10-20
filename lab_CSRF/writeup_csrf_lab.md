@@ -8,7 +8,8 @@
 
 <details open>
 <summary> ✴️ HINT  Guarde risultati nmap </summary>
-	<p dir="auto">Nmap scan report for 172.18.0.3
+	<p>
+		Nmap scan report for 172.18.0.3
 		Host is up (0.000031s latency)
 		PORT   STATE SERVICE VERSION
 		2/tcp open  ssh     OpenSSH 10.0p2 Debian 7+deb13u4 (protocol 2.0)
@@ -31,7 +32,8 @@
 ```
 <details open>
 	<summary>💯  HINT Guarda result gobuster </summary>
-	<p dir="auto">===============================================================
+	<p>
+		===============================================================
 		Gobuster v3.8.2
 		by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)	
 		===============================================================
@@ -71,7 +73,7 @@
 ```
 <details open>
 	<summary>✴️ HINT guarda risultato gobuster su altro endpoint. </summary>
-	<p dir="auto"
+	<p>
 		>===============================================================
 		Gobuster v3.8.2
 		by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
@@ -122,9 +124,8 @@
 # foothold (Intrusione).
 * Dopo vari test e tentativi ripetuti notiamo che l'app e vulnerabile a CSRF, bene creamo un exploit su misura
 
-<details open>
-	<summary> ✴️ HINT guarda rilultati foothold. </summary>
-	<p dir="auto">
+# ✴️ HINT guarda rilultati foothold.
+<p>
 		<!DOCTYPE html>
 			<html lang="it">
 				<head>
@@ -144,7 +145,7 @@
 					</script>
 				</body>
 			</html>
-	</p>
+</p>
 </details>
 
 # Salviamolo come malicius.html e prepariamo un server web con python in attesa di richieste.
