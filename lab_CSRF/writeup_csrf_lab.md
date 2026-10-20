@@ -5,7 +5,8 @@
 ```
 # Nmap 7.991 scan initiated Mon Oct 19 20:51:44 2026 as: /usr/lib/nmap/nmap -sCV -p22,80 -oN target 172.X.X.X
 <details open>
-<summary>  ✴️ HINT  Guarde risultati nmap
+<summary> ::mark  
+			✴️ HINT  Guarde risultati nmap
 			Nmap scan report for 172.18.0.3
 			Host is up (0.000031s latency)
 			PORT   STATE SERVICE VERSION
@@ -26,7 +27,8 @@
 	gobuster dir -u http://172.X.X.X/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 100 -x php,html,js,txt -o webscan
 ```
 <details open>
-<summary>  💯  HINT Guarda result gobuster
+	<summary> ::mark  
+		💯  HINT Guarda result gobuster
 	===============================================================
 	Gobuster v3.8.2
 	by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)	
@@ -66,7 +68,8 @@
         --exclude-length 319 -t 100 -x php,html,js,txt,json
 ```
 <details open>
-<summary> ✴️ HINT guarda risultato gobuster su altro endpoint.
+	<summary>  ::mark 
+		✴️ HINT guarda risultato gobuster su altro endpoint.
 	===============================================================
 	Gobuster v3.8.2
 	by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
@@ -117,7 +120,8 @@
 # foothold (Intrusione).
 >** Dopo vari test e tentativi ripetuti notiamo che l'app e vulnerabile a CSRF, bene creamo un exploit su misura..
 <details open>
-<summary> ✴️ HINT guarda rilultati foothold.
+	<summary> ::mark 
+		✴️ HINT guarda rilultati foothold.
 	```bash
 	<!DOCTYPE html>
 	<html lang="it">
@@ -158,11 +162,10 @@
 # Privilege Escalation
 * dopo una lunga ricerca ed enumerazione di systema troviamo le credenziali per elevare i nostri privilegi.
 <details open>
-	<summary> ✴️ HINT Guarda risultato privilege escalation
+	<summary>  ::mark 
+		✴️ HINT Guarda risultato privilege escalation
 		```bash
 		su root
 		```
 	</summary>
 </details>
-```
-</summary>
