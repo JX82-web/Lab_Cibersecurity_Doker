@@ -1,0 +1,10 @@
+services:
+  web_server:
+    build: ./web
+    container_name: htb_ecommerce_web
+    ports:
+      - "80:80"
+      - "2222:22"
+    volumes:
+      - ./web:/var/www/html
+    restart: always
