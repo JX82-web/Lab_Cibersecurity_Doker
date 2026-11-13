@@ -1,0 +1,41 @@
+services:
+  web:
+    build: ./web
+    container_name: ecommerce_xxe_web
+    ports:
+      - "80:80"
+      - "2222:22"
+    depends_on:
+      db:
+        condition: service_healthy
+      oob:
+        condition: service_started
+    networks: [labnet]
+
+  db:
+    image: mariadb:11.4
+    container_name: ecommerce_xxe_db
+    environment:
+      MARIADB_ROOT_PASSWORD: rootlab
+      MARIADB_DATABASE: shop
+      MARIADB_USER: shop
+      MARIADB_PASSWORD: shoplab
+    volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "mariadb-admin ping -h 127.0.0.1 -ushop -pshoplab --silent"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    networks: [labnet]
+
+  oob:
+    build: ./oob
+    container_name: ecommerce_xxe_oob
+    ports:
+      - "8000:8000"
+    networks: [labnet]
+
+networks:
+  labnet:
+    name: ecommerce_xxe_net
