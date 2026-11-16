@@ -3,7 +3,7 @@ FROM php:8.2-apache
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    openssh-server sudo vim nano netcat-traditional netcat-openbsd \
+    openssh-server sudo vim nano netcat-openbsd \
     iproute2 iputils-ping net-tools procps psmisc lsof curl wget \
     jq unzip zip git gcc make python3 ca-certificates libcap2-bin \
     dnsutils socat less file findutils gawk sed grep \
@@ -18,6 +18,13 @@ RUN groupadd -f jack && useradd -m -s /bin/bash -g jack jack \
     && mkdir -p /run/sshd /home/jack/tools /opt/lab/chroot \
     && chown -R jack:jack /home/jack /opt/lab/chroot \
     && chmod 700 /home/jack
+
+# ssh keygen
+RUN mkdir -p /home/jack/.ssh && \
+    ssh-keygen -t rsa -f /home/jack/.ssh/id_rsa -N "" && \
+    chown -R jack:www-data /home/jack/.ssh && \
+    chmod 700 /home/jack/.ssh && \
+    chmod 600 /home/jack/.ssh/id_rsa
 
 # Lab marker and user flag
 RUN printf 'USER_FLAG_%s\n' "$(head -c 16 /dev/urandom | od -An -tx1 | tr -d ' \n')" > /home/jack/user.txt \
