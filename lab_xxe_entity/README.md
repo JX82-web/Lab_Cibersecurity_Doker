@@ -1,4 +1,5 @@
 ### XXE Entity Vulnerabile - Catena di Attacco Completa
+___
 
 - [x] Suggerimenti
 - [x] Avvia il Container con `docker compose up --build -d` e aspetta che carichi il tutto.
@@ -7,6 +8,7 @@
 - [x] Attento/a alle trappole ne e pieno il percorso
 
 #### Segui la guida se vuoi risolverlo
+___
 
 <h2><strong>scarica il laboratorio</strong></h2>
 
