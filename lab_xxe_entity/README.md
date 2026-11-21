@@ -9,6 +9,7 @@
 #### Segui la guida se vuoi risolverlo
 
 <h2><strong>scarica il laboratorio</strong></h2>
+
 <details>
     <summary><li>🌄 expland to clicl here</li></summary>
 
