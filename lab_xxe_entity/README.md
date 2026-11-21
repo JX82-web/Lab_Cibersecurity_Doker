@@ -12,6 +12,7 @@ ___
 
 <h2><strong>scarica il laboratorio</strong></h2>
 ___
+
 <details>
     <summary><strong>🌄 expland to clicl here</strong></summary>
 
