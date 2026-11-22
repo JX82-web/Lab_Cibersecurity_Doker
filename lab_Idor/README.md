@@ -40,4 +40,4 @@ docker compose up --build
 _JX82 vi vuole bene_
 
 
-[Seguimi sul mio canale youtube](https://www.youtube.com/watch?v=D5Ac8GiDNa8)
+[Seguimi sul mio canale youtube](https://www.youtube.com/watch?v=k8fY4gIj7uU&list=PLJH1ECh-3zqQ&index=5)
