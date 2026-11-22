@@ -24,4 +24,5 @@ ___
 
 - [x] In questa guida non troverai assolutamente nulla di utile
 - [x] explora, agisci e si Etico, o sarai mio nemico....
-- [x] ==JX82 Vi vuole bene..!==
+
+==JX82 Vi vuole bene..!==
