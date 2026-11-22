@@ -1,7 +1,7 @@
 # Lab IDOR - Catena completa
 ___
 
-- [x] ancora da definire
+- [x] Crea tu un Writeup di questo laboratorio e sara pubblicato su questa pagina
 - [x] Testa le capacità di penetrescion tester
 
 + Enumerazione web fondamentale
