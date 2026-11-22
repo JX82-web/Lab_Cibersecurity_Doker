@@ -6,7 +6,7 @@
 + Enumerazione web fondamentale
 + Movimento laterale e privilege escalation
 
-__==Padroneggia la cibersecurity==__
+==Padroneggia la cibersecurity==
 
 
 ![Seguimi sul mio canale youtube](https://www.youtube.com/watch?v=D5Ac8GiDNa8 "By JX82")
@@ -14,7 +14,7 @@ __==Padroneggia la cibersecurity==__
 <details>
     <summary> info contact (expand to contact to)</summary>
    
-    <p>Info e contact: <salvo8253@live.it></p>
+    Info e contact: <salvo8253@live.it>
 
 </details>
 
