@@ -18,7 +18,7 @@ ___
 
 [Video dimostrativo sul mio canale youtube](https://www.youtube.com/watch?v=D5Ac8GiDNa8 "By JX82")
 
-<details> Info e contact: <salvo8253@live.it> </details>
+  Info e contact: <salvo8253@live.it> 
 
 #### Privilege escalation via cronjobs
 
