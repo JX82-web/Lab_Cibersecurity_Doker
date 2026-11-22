@@ -16,7 +16,7 @@ ___
 
 ___
 
-![Video dimostrativo sul mio canale youtube](https://www.youtube.com/watch?v=D5Ac8GiDNa8 "By JX82")
+[Video dimostrativo sul mio canale youtube](https://www.youtube.com/watch?v=D5Ac8GiDNa8 "By JX82")
 
 <details>
     <summary> info contact (expand to contact to)</summary>
