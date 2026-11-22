@@ -14,7 +14,7 @@ __==Padroneggia la cibersecurity==__
 <details>
     <summary> info contact (expand to contact to)</summary>
    
-    <p>Info e contact: <salvo8253@live.it>
+    <p>Info e contact: <salvo8253@live.it></p>
 
 </details>
 
