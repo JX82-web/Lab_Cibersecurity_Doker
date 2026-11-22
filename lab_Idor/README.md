@@ -2,7 +2,7 @@
 ___
 
 - [x] Crea tu un Writeup di questo laboratorio e sara pubblicato su questa pagina
-- [x] Testa le capacità di penetrescion tester
+- [x] Testa le capacità di penetration tester
 
 + Enumerazione web fondamentale
 + Movimento laterale e privilege escalation
