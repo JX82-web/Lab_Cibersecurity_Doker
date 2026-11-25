@@ -28,8 +28,7 @@ Web: `http://<IP-LAB>`  SSH: `localhost:22`
 ```
 </details>
 
-<details>
-	<summary> ⚠️ README ⚠️ <summary>
+<details>⚠️ README ⚠️ </details>
 
 ```lua
 1)  Cosa impareremo in questo nuovo lab?
@@ -40,5 +39,4 @@ Web: `http://<IP-LAB>`  SSH: `localhost:22`
 6) Privilege escalation
 ```
 
-</details>
 
