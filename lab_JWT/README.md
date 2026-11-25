@@ -26,18 +26,14 @@ Web: `http://<IP-LAB>`  SSH: `localhost:22`
 
 </details>
 
+
 <details>
-	<summary> ⚠️ README ⚠️ <summary>    
-
+	<summary>⚠️ README ⚠️<summary>
 ### Cosa impareremo in questo nuovo lab?
-
 - [x]  Manipolazione del token e furto di sessione privilegiata
 - [x]  Esfiltrazioni dei dati degli utenti di sistema
-
 - [x]  Cracking delle password
-
 - [x]  Reverseshell script
-
 - [X]  Privilege escalation
 
 </details>
