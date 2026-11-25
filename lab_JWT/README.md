@@ -39,3 +39,11 @@ Web: `http://<IP-LAB>`  SSH: `localhost:22`
 6) Privilege escalation
 ```
 </details>
+
+<details><summary>ℹ️ Info e contact ℹ️ </summary>
+
+    [Foolow me on my channel Youtuve](https://www.youtube.com/@salvo8253?app=desktop)
+    
+    Info  & contact: <salvo8253@live.it>
+</details>
+
