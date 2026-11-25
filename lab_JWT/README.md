@@ -28,7 +28,7 @@ Web: `http://<IP-LAB>`  SSH: `localhost:22`
 ```
 </details>
 
-<details><h3>⚠️ README ⚠️</h3>
+<details><summary>⚠️ README ⚠️ </summary>
 
 ```lua
 1)  Cosa impareremo in questo nuovo lab?
