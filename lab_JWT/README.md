@@ -21,7 +21,7 @@ Web: `http://<IP-LAB>`  SSH: `localhost:22`
 - [x] remove and clean container: `docker system prune -a --volumes -f`
 
 <details>
-    <summary>⚠️ Expand to read⚠️</summary>
+    <summary> ⚠️ Expand to read⚠️ </summary>
 
 ```lua
     Flags use `openssl rand -hex 16` and mode 600. Required tools: vim, nano, netcat-openbsd.
@@ -29,7 +29,7 @@ Web: `http://<IP-LAB>`  SSH: `localhost:22`
 </details>
 
 <details>
-	<summary>⚠️ README ⚠️<summary>
+	<summary> ⚠️ README ⚠️ <summary>
 
 ```lua
 1)  Cosa impareremo in questo nuovo lab?
