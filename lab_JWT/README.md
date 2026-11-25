@@ -28,7 +28,7 @@ Web: `http://<IP-LAB>`  SSH: `localhost:22`
 ```
 </details>
 
-<details><summary>⚠️ [README] (Cosa impareremo in questo nuovo lab?)⚠️ </summary>
+<details><summary>⚠️ [README](Cosa impareremo in questo nuovo lab?)⚠️ </summary>
 
 ```json
 1) Cosa impareremo in questo nuovo lab?
