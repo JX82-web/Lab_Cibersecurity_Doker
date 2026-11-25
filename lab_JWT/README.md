@@ -23,16 +23,12 @@ Web: `http://<IP-LAB>`  SSH: `localhost:22`
 ```lua
     Flags use `openssl rand -hex 16` and mode 600. Required tools: vim, nano, netcat-openbsd.
 ```
-
 </details>
-
-
-
 <details>
 	<summary>⚠️ README ⚠️<summary>
-        <h1>Cosa impareremo in questo nuovo lab?</h1>
-        - [x]  Manipolazione del token e furto di sessione privilegiata
-        - [x]  Esfiltrazioni dei dati degli utenti di sistema
+- [x] Cosa impareremo in questo nuovo lab?
+-[x]  Manipolazione del token e furto di sessione privilegiata
+- [x]  Esfiltrazioni dei dati degli utenti di sistema
 - [x]  Cracking delle password
 - [x]  Reverseshell script
 - [X]  Privilege escalation
