@@ -1,6 +1,7 @@
 ___
 
 ###  lab_JWT - Catena completa
+
 ___
 
 <h1>Enterprise Cloud Portal & Infrastructure Security Lab</h1>
@@ -21,7 +22,7 @@ Web: `http://<IP-LAB>`  SSH: `localhost:22`
 
 <details>
     <summary>⚠️ Expand to read⚠️</summary>
-	
+
 ```lua
     Flags use `openssl rand -hex 16` and mode 600. Required tools: vim, nano, netcat-openbsd.
 ```
@@ -29,14 +30,15 @@ Web: `http://<IP-LAB>`  SSH: `localhost:22`
 
 <details>
 	<summary>⚠️ README ⚠️<summary>
-		
+
 ```lua
-+ Cosa impareremo in questo nuovo lab?
-+ Manipolazione del token e furto di sessione privilegiata
-+ Esfiltrazioni dei dati degli utenti di sistema
-+ Cracking delle password
-+ Reverseshell script
-+ Privilege escalation
+1)  Cosa impareremo in questo nuovo lab?
+2) Manipolazione del token e furto di sessione privilegiata
+3) Esfiltrazioni dei dati degli utenti di sistema
+4) Cracking delle password
+5) Reverseshell script
+6) Privilege escalation
 ```
 
 </details>
+
