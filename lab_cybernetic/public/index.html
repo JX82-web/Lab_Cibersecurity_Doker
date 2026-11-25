@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybernetic Shop - E-commerce Sicuro</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo"><a href="/">Cybernetic Shop</a></h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="/" class="active">Catalogo</a></li>
+                    <li><a href="/login.html">Login</a></li>
+                    <li><a href="/dashboard.html" id="dashboard-link" style="display:none;">Dashboard</a></li>
+                    <li><a href="/admin/" id="admin-link" style="display:none;">Admin</a></li>
+                    <li><button id="logout-btn" style="display:none;" class="btn btn-secondary">Logout</button></li>
+                    <li>
+                        <div class="cart-icon" id="cart-icon" style="display:none;">
+                            <span>🛒</span>
+                            <span class="cart-count" id="cart-count">0</span>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="hero">
+                <h2>Benvenuto su Cybernetic Shop</h2>
+                <p>Il laboratorio di e-commerce con vulnerabilita intenzionali per scopi didattici</p>
+            </section>
+
+            <section class="products-section">
+                <div class="section-header">
+                    <h2>I Nostri Prodotti</h2>
+                    <div class="filters">
+                        <select id="category-filter">
+                            <option value="">Tutte le categorie</option>
+                        </select>
+                        <input type="text" id="search-input" placeholder="Cerca prodotti...">
+                    </div>
+                </div>
+                
+                <div class="products-grid" id="products-grid">
+                    <div class="loading">Caricamento prodotti...</div>
+                </div>
+                
+                <div class="pagination" id="pagination" style="display:none;">
+                    <button id="prev-page" disabled>Precedente</button>
+                    <span id="page-info">Pagina 1</span>
+                    <button id="next-page" disabled>Successiva</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Cybernetic Lab - Laboratorio Didattico di Sicurezza</p>
+        </div>
+    </footer>
+
+    <script src="/assets/css/js/shop.js"></script>
+    <script src="/assets/css/js/auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            Auth.init();
+            Shop.init();
+        });
+    </script>
+</body>
+</html>

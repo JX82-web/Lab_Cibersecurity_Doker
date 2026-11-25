@@ -1,0 +1,14 @@
+{
+    "plugins": {
+        "discount-calc": {
+            "name": "Calcolatore Sconti",
+            "version": "1.0.0",
+            "description": "Plugin per calcolo sconti dinamici su prodotti",
+            "author": "Cybernetic Lab",
+            "entry_point": "plugin.php",
+            "enabled": true,
+            "installed_at": "2024-01-15T10:00:00Z",
+            "permissions": ["shop.discount"]
+        }
+    }
+}

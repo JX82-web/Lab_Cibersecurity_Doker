@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Cybernetic Shop</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo"><a href="/">Cybernetic Shop</a></h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="/">Catalogo</a></li>
+                    <li><a href="/dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="/admin/" id="admin-link" style="display:none;">Admin</a></li>
+                    <li><button id="logout-btn" class="btn btn-secondary">Logout</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="dashboard">
+                <div class="dashboard-header">
+                    <h2>Area Personale</h2>
+                    <div class="user-info" id="user-info">Caricamento...</div>
+                </div>
+
+                <section class="dashboard-section">
+                    <h3>Profilo</h3>
+                    <div class="profile-card" id="profile-card">
+                        <div class="avatar-container">
+                            <img id="avatar-img" src="" alt="Avatar" style="display:none;">
+                            <div id="avatar-placeholder" class="avatar-placeholder">👤</div>
+                            <form id="avatar-form" enctype="multipart/form-data" style="margin-top:10px;">
+                                <input type="file" id="avatar-input" name="file" accept="image/*" style="display:none;">
+                                <button type="button" id="change-avatar-btn" class="btn btn-secondary btn-sm">Cambia Avatar</button>
+                            </form>
+                        </div>
+                        <div class="profile-details">
+                            <p><strong>Username:</strong> <span id="profile-username"></span></p>
+                            <p><strong>Email:</strong> <span id="profile-email"></span></p>
+                            <p><strong>Ruolo:</strong> <span id="profile-role" class="badge"></span></p>
+                            <p><strong>Membro dal:</strong> <span id="profile-created"></span></p>
+                            <p><strong>Ultimo accesso:</strong> <span id="profile-last-login"></span></p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="dashboard-section">
+                    <h3>I Tuoi Ordini</h3>
+                    <div class="orders-list" id="orders-list">
+                        <div class="loading">Caricamento ordini...</div>
+                    </div>
+                </section>
+
+                <section class="dashboard-section">
+                    <h3>Upload Documenti</h3>
+                    <form id="upload-form" enctype="multipart/form-data" class="upload-form">
+                        <div class="form-group">
+                            <label for="document-input">Seleziona file (PDF, JPG, PNG - max 5MB)</label>
+                            <input type="file" id="document-input" name="file" accept=".pdf,.jpg,.jpeg,.png" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Carica Documento</button>
+                        <div id="upload-result" class="upload-result" style="display:none;"></div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="/assets/css/js/auth.js"></script>
+    <script src="/assets/css/js/shop.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            Auth.init();
+            if (Auth.isAuthenticated()) {
+                Dashboard.init();
+            } else {
+                window.location.href = '/login.html';
+            }
+        });
+    </script>
+</body>
+</html>

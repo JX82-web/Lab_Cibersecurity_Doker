@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Cybernetic Shop</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo"><a href="/">Cybernetic Shop</a></h1>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <h2>Accedi al tuo account</h2>
+                    
+                    <div id="login-alert" class="alert" style="display:none;"></div>
+                    
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="username">Username o Email</label>
+                            <input type="text" id="username" name="username" required autocomplete="username">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required autocomplete="current-password">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    </form>
+                    
+                    <div class="auth-links">
+                        <p>Non hai un account? <a href="#" id="register-link">Registrati</a> (solo demo)</p>
+                        <p><a href="/">Torna al catalogo</a></p>
+                    </div>
+                    
+                    <details class="demo-credentials">
+                        <summary>Credenziali Demo</summary>
+                        <ul>
+                            <li><strong>Admin:</strong> admin / admin123</li>
+                            <li><strong>User:</strong> user / user123</li>
+                            <li><strong>Premium:</strong> premium / premium123</li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/assets/css/js/auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            Auth.init();
+            Auth.bindLoginForm();
+        });
+    </script>
+</body>
+</html>

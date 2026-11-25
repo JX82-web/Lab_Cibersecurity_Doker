@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Cybernetic Shop</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <header class="header header-admin">
+        <div class="container">
+            <h1 class="logo"><a href="/admin/">Cybernetic Shop - Admin</a></h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="/admin/" class="active">Utenti</a></li>
+                    <li><a href="/admin/plugins.html">Plugin</a></li>
+                    <li><a href="/">Vetrina</a></li>
+                    <li><button id="logout-btn" class="btn btn-secondary">Logout</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="admin-panel">
+                <div class="admin-header">
+                    <h2>Gestione Utenti</h2>
+                    <div id="admin-user-info" class="admin-user-info"></div>
+                </div>
+
+                <div class="table-container">
+                    <table class="admin-table" id="users-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Ruolo</th>
+                                <th>Stato</th>
+                                <th>Creato</th>
+                                <th>Ultimo Login</th>
+                                <th>Azioni</th>
+                            </tr>
+                        </thead>
+                        <tbody id="users-tbody">
+                            <tr><td colspan="8" class="loading">Caricamento utenti...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination" id="admin-pagination">
+                    <button id="admin-prev" disabled>Precedente</button>
+                    <span id="admin-page-info">Pagina 1</span>
+                    <button id="admin-next" disabled>Successiva</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/assets/css/js/auth.js"></script>
+    <script src="/assets/css/js/admin.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            Auth.init();
+            if (Auth.isAuthenticated() && Auth.getUserRole() === 'admin') {
+                Admin.init();
+            } else {
+                window.location.href = '/login.html';
+            }
+        });
+    </script>
+</body>
+</html>
