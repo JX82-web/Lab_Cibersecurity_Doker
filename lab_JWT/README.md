@@ -30,8 +30,8 @@ Web: `http://<IP-LAB>`  SSH: `localhost:22`
 
 <details><summary>⚠️ README ⚠️ </summary>
 
-```lua
-1)  Cosa impareremo in questo nuovo lab?
+```java
+1) Cosa impareremo in questo nuovo lab?
 2) Manipolazione del token e furto di sessione privilegiata
 3) Esfiltrazioni dei dati degli utenti di sistema
 4) Cracking delle password
