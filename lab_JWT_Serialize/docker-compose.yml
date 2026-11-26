@@ -1,0 +1,28 @@
+services:
+  cyber_site:
+    build: .
+    container_name: ctf_cyber_site
+    ports:
+      - "127.0.0.1:8080:80"
+      - "127.0.0.1:2222:22"
+    depends_on:
+      - cyber_db
+    networks:
+      - cybernet
+
+  cyber_db:
+    image: mysql:8.0
+    container_name: ctf_cyber_db
+    environment:
+      MYSQL_DATABASE: cyber_site
+      MYSQL_USER: cyber
+      MYSQL_PASSWORD: cyber_lab_password
+      MYSQL_ROOT_PASSWORD: root_lab_password
+    volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    networks:
+      - cybernet
+
+networks:
+  cybernet:
+    driver: bridge

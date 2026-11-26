@@ -1,0 +1,9 @@
+{
+  "name": "lab/cyber-site",
+  "description": "Local cybersecurity training lab",
+  "autoload": {
+    "psr-4": {
+      "Lab\\": ""
+    }
+  }
+}
